@@ -1,0 +1,42 @@
+{
+  "name": "ai-feiman-tutor",
+  "version": "1.0.0",
+  "description": "AI费曼小老师 - 桌面版数学学习陪伴工具",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && node node_modules/electron/cli.js .\"",
+    "electron:start": "node node_modules/electron/cli.js .",
+    "server": "node server/index.js"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.2.0",
+    "axios": "^1.7.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
+    "express": "^4.21.0",
+    "opencc-js": "^1.4.1",
+    "paddleocr": "^1.2.0",
+    "pinia": "^2.2.0",
+    "sharp": "^0.35.3",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "concurrently": "^9.0.0",
+    "electron": "^43.2.0",
+    "electron-builder": "^25.0.0",
+    "sql.js": "^1.10.3",
+    "vite": "^5.4.0",
+    "wait-on": "^8.0.0"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true,
+    "onnxruntime-node@1.24.3": true,
+    "protobufjs@7.6.5": true,
+    "sharp@0.34.5": true,
+    "vue-demi@0.14.10": true
+  }
+}
